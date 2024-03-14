@@ -22,8 +22,8 @@ add_action('wp_enqueue_scripts', function () {
  *
  * @return void
  */
-add_action('enqueue_block_editor_assets', function () {
-    bundle('editor')->enqueue();
+add_action('admin_enqueue_scripts', function () {
+    bundle('admin')->enqueue();
 }, 100);
 
 /**
