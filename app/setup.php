@@ -33,6 +33,12 @@ add_action('enqueue_block_editor_assets', function () {
  */
 add_action('after_setup_theme', function () {
     /**
+     * Enable SSM features
+     */
+    add_theme_support('ssm-admin-cleanup');
+    add_theme_support('ssm-public-setup');
+
+    /**
      * Disable full-site editing support.
      *
      * @link https://wptavern.com/gutenberg-10-5-embeds-pdfs-adds-verse-block-color-options-and-introduces-new-patterns

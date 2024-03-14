@@ -63,3 +63,9 @@ collect(['setup', 'filters'])
             );
         }
     });
+
+/**
+ * Boot SSM Core
+ */
+$core = new SSM\Core();
+$core->setup();
