@@ -1,0 +1,17 @@
+{
+    "name": "ssm/features",
+    "type": "wordpress-theme",
+    "license": "MIT",
+    "description": "A collection of features to plug in on a project basis on SSM projects",
+    "homepage": "https://www.secretstache.com/",
+    "authors": [
+        {
+            "name": "Alexander Smulsky",
+            "email": "alex@secretstache.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "composer/installers": "~1.0"
+    }
+}
