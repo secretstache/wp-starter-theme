@@ -34,7 +34,7 @@ export default async (app) => {
    */
   app
     .setUrl('http://localhost:3000')
-    .setProxyUrl('http://starter-sage.local')
+    .setProxyUrl(process.env.WP_HOME)
     .watch(['resources/views', 'app']);
 
   app.eslint

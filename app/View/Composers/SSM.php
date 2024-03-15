@@ -138,7 +138,7 @@ class SSM extends Composer
         return $choices ?? [];
     }
 
-    public static function getCustomClasses($custom_classes = null, $args)
+    public static function getCustomClasses($custom_classes, $args)
     {
         $response = "";
 
