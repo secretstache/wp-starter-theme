@@ -29,13 +29,13 @@
     "@roots/bud-sass": "^6.20.0",
     "@roots/eslint-config": "^6.20.0",
     "@roots/sage": "6.20.0",
-    "stylelint": "^15.10.3",
-    "stylelint-config-standard-scss": "^11.1.0",
+    "ncp": "^2.0.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "3.0.3",
     "prettier-plugin-css-order": "^2.0.0",
     "prettier-plugin-multiline-arrays": "^3.0.0",
-    "ncp": "^2.0.0",
-    "npm-run-all": "^4.1.5"
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard-scss": "^11.1.0"
   },
   "dependencies": {}
 }

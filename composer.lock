@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a1cf63a01518e4a1cc109d83e71cc1d",
+    "content-hash": "d8c0d59bcc491cf2529929c74ea6b60d",
     "packages": [
         {
             "name": "brick/math",
@@ -1789,16 +1789,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "3.25.0",
+            "version": "3.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "4c44347133618cccd9b3df1729647a1577b4ad99"
+                "reference": "abbd664eb4381102c559d358420989f835208f18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4c44347133618cccd9b3df1729647a1577b4ad99",
-                "reference": "4c44347133618cccd9b3df1729647a1577b4ad99",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/abbd664eb4381102c559d358420989f835208f18",
+                "reference": "abbd664eb4381102c559d358420989f835208f18",
                 "shasum": ""
             },
             "require": {
@@ -1863,7 +1863,7 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
-                "source": "https://github.com/thephpleague/flysystem/tree/3.25.0"
+                "source": "https://github.com/thephpleague/flysystem/tree/3.25.1"
             },
             "funding": [
                 {
@@ -1875,20 +1875,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-09T17:06:45+00:00"
+            "time": "2024-03-16T12:53:19+00:00"
         },
         {
             "name": "league/flysystem-local",
-            "version": "3.23.1",
+            "version": "3.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem-local.git",
-                "reference": "b884d2bf9b53bb4804a56d2df4902bb51e253f00"
+                "reference": "61a6a90d6e999e4ddd9ce5adb356de0939060b92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/b884d2bf9b53bb4804a56d2df4902bb51e253f00",
-                "reference": "b884d2bf9b53bb4804a56d2df4902bb51e253f00",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-local/zipball/61a6a90d6e999e4ddd9ce5adb356de0939060b92",
+                "reference": "61a6a90d6e999e4ddd9ce5adb356de0939060b92",
                 "shasum": ""
             },
             "require": {
@@ -1922,8 +1922,7 @@
                 "local"
             ],
             "support": {
-                "issues": "https://github.com/thephpleague/flysystem-local/issues",
-                "source": "https://github.com/thephpleague/flysystem-local/tree/3.23.1"
+                "source": "https://github.com/thephpleague/flysystem-local/tree/3.25.1"
             },
             "funding": [
                 {
@@ -1935,7 +1934,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-26T18:25:23+00:00"
+            "time": "2024-03-15T19:58:44+00:00"
         },
         {
             "name": "league/mime-type-detection",
@@ -3048,44 +3047,6 @@
             "time": "2021-01-17T14:18:34+00:00"
         },
         {
-            "name": "ssm/features",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/secretstache/ssm-features.git",
-                "reference": "d0af152a838a3088975559fbdeaa0f86c2e40dbc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/secretstache/ssm-features/zipball/d0af152a838a3088975559fbdeaa0f86c2e40dbc",
-                "reference": "d0af152a838a3088975559fbdeaa0f86c2e40dbc",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "php": ">=7.4"
-            },
-            "default-branch": true,
-            "type": "wordpress-theme",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alexander Smulsky",
-                    "email": "alex@secretstache.com"
-                }
-            ],
-            "description": "A collection of features to plug in on a project basis on SSM projects",
-            "homepage": "https://www.secretstache.com/",
-            "support": {
-                "issues": "https://github.com/secretstache/ssm-features/issues",
-                "source": "https://github.com/secretstache/ssm-features/tree/master"
-            },
-            "time": "2023-11-29T09:09:58+00:00"
-        },
-        {
             "name": "ssm/required-plugins",
             "version": "dev-master",
             "source": {
@@ -3138,98 +3099,6 @@
                 "source": "https://github.com/secretstache/ssm-required-plugins/tree/1.0.1"
             },
             "time": "2021-01-17T10:51:38+00:00"
-        },
-        {
-            "name": "ssm/static-boilerplate",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/secretstache/ssm-static-boilerplate.git",
-                "reference": "971e16bd5c9a40c2ca94651d0953f155a585989e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/secretstache/ssm-static-boilerplate/zipball/971e16bd5c9a40c2ca94651d0953f155a585989e",
-                "reference": "971e16bd5c9a40c2ca94651d0953f155a585989e",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "php": ">=7.1"
-            },
-            "default-branch": true,
-            "type": "wordpress-theme",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Rich Staats",
-                    "email": "rich@secretstache.com"
-                },
-                {
-                    "name": "Alexander Smulsky",
-                    "email": "alex@secretstache.com"
-                },
-                {
-                    "name": "Victoria Naumova",
-                    "email": "victoria@secretstache.com"
-                }
-            ],
-            "description": "Static boilerplate which contains a starting static development point for SSM projects",
-            "homepage": "https://www.secretstache.com/",
-            "support": {
-                "issues": "https://github.com/secretstache/ssm-static-boilerplate/issues",
-                "source": "https://github.com/secretstache/ssm-static-boilerplate/tree/master"
-            },
-            "time": "2024-03-13T10:43:48+00:00"
-        },
-        {
-            "name": "ssm/theme-boilerplate",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/secretstache/ssm-theme-boilerplate.git",
-                "reference": "d17b9ccb374d623352733e9a8d08c87ba1eb6b14"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/secretstache/ssm-theme-boilerplate/zipball/d17b9ccb374d623352733e9a8d08c87ba1eb6b14",
-                "reference": "d17b9ccb374d623352733e9a8d08c87ba1eb6b14",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "johnbillion/extended-cpts": "^4.3",
-                "php": ">=7.1",
-                "soberwp/bundle": "^1.0",
-                "ssm/required-plugins": "dev-master",
-                "stoutlogic/acf-builder": "^1.9"
-            },
-            "default-branch": true,
-            "type": "wordpress-theme",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Rich Staats",
-                    "email": "rich@secretstache.com"
-                },
-                {
-                    "name": "Alexander Smulsky",
-                    "email": "alex@secretstache.com"
-                }
-            ],
-            "description": "Theme boilerplate which contains a collection of basic theme modules for SSM projects",
-            "homepage": "https://www.secretstache.com/",
-            "support": {
-                "issues": "https://github.com/secretstache/ssm-theme-boilerplate/issues",
-                "source": "https://github.com/secretstache/ssm-theme-boilerplate/tree/master"
-            },
-            "time": "2024-02-22T16:56:25+00:00"
         },
         {
             "name": "stoutlogic/acf-builder",
@@ -5499,9 +5368,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "ssm/core": 20,
-        "ssm/static-boilerplate": 20,
-        "ssm/theme-boilerplate": 20,
-        "ssm/features": 20
+        "ssm/required-plugins": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

@@ -39,11 +39,6 @@
     }
   },
   "extra": {
-    "installer-paths": {
-      "theme-boilerplate/": ["ssm/theme-boilerplate"],
-      "features/": ["ssm/features"],
-      "static/": ["ssm/static-boilerplate"]
-    },
     "acorn": {
       "providers": [
         "App\\Providers\\ThemeServiceProvider",
@@ -55,9 +50,10 @@
     "php": ">=8.1",
     "roots/acorn": "^3.3",
     "ssm/core": "dev-master",
-	  "ssm/static-boilerplate": "dev-master",
-	  "ssm/theme-boilerplate": "dev-master",
-    "ssm/features": "dev-master"
+    "johnbillion/extended-cpts": "^4.3",
+    "stoutlogic/acf-builder": "^1.9",
+    "ssm/required-plugins": "dev-master",
+    "soberwp/bundle": "^1.0"
   },
   "require-dev": {
     "laravel/pint": "^1.13"
