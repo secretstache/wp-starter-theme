@@ -8,6 +8,6 @@
 
 @section('content')
 
-	@include('page-builder')
+    @include('page-builder')
 
 @endsection
