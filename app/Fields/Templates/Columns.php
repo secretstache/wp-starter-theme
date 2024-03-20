@@ -19,9 +19,6 @@ class Columns
 
         /**
          * [Template] - Free Form
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $columnsTemplate = new FieldsBuilder('columns', [
             'title'	=> 'Free Form'

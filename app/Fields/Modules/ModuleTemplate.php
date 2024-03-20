@@ -9,7 +9,7 @@ class ModuleTemplate {
 	public static function getFields() {
 
         /**
-         * [Template] - Module Template
+         * [Module] - Module Template
          */
         $moduleTemplate = new FieldsBuilder('module-template', [
             'label'	=> 'Module Template'

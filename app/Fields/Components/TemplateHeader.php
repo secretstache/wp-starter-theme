@@ -9,11 +9,7 @@ class TemplateHeader {
 	public static function getFields() {
 
 		/**
-         * [Option] - Template Header
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Extract Headline / Subheadline into a Header Snippet
-         * @todo Link to Team Snippet Code
+         * [Component] - Template Header
          */
         $templateHeaderOptions = new FieldsBuilder('template-header');
 

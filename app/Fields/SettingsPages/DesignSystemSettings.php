@@ -20,8 +20,8 @@ class DesignSystemSettings {
 		$globalSettings
 
             ->addTrueFalse('ds_require_auth', [
-                'label'		=> false,
-                'message'	=> 'Require authentication to view Design System',
+                'label'			=> false,
+                'message'		=> 'Require authentication to view Design System',
                 'default_value' => 1
             ])
 

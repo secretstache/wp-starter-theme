@@ -10,10 +10,6 @@ class ImageLink {
 
 		/**
          * [Option] - Image Link
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Extract Link Source into it's own snippet
-         * @todo Link to Team Snippet Code
          */
         $imageLinkOptions = new FieldsBuilder('image_link_options');
 

@@ -12,9 +12,6 @@ class TemplateSpacing
 
         /**
          * [Option] - Template Spacing Options
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $templateSpacingOptions = new FieldsBuilder('template_spacing_options');
 

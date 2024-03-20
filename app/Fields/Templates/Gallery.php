@@ -16,9 +16,6 @@ class Gallery {
 
         /**
          * [Template] - Gallery
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $galleryTemplate = new FieldsBuilder('gallery', [
             'label'	=> 'Image Gallery'

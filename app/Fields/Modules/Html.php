@@ -13,9 +13,6 @@ class Html {
 
 		/**
          * [Module] - HTML
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $htmlModule = new FieldsBuilder('html', [
             'title'	=> 'HTML'

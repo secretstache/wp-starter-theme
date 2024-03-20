@@ -14,9 +14,6 @@ class Accordion {
 
 		/**
          * [Module] - Accordion
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $accordionModule = new FieldsBuilder('accordion', [
             'title'	=>	'Accordion'

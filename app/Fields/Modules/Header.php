@@ -14,9 +14,6 @@ class Header {
 
 		/**
          * [Module] - Header
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $headerModule = new FieldsBuilder('header', [
             'title'	=> 'Header'

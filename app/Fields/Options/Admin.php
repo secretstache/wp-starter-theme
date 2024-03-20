@@ -10,9 +10,6 @@ class Admin {
 
         /**
          * [Option] - Admin Options
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Code Snippet
          */
         $adminOptions = new FieldsBuilder('admin_options');
 

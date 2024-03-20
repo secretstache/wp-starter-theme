@@ -10,9 +10,6 @@ class HtmlAttributes {
 
 		/**
          * [Option] - HTML Attributes
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $htmlAttributesOptions = new FieldsBuilder('html_attributes_options');
 

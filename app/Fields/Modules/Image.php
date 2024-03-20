@@ -15,9 +15,6 @@ class Image {
 
 		/**
          * [Module] - Image
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $imageModule = new FieldsBuilder('image', [
             'title'	=> 'Image'

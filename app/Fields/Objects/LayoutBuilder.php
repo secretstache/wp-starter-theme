@@ -8,6 +8,7 @@ use App\Fields\Templates\CallToAction;
 use App\Fields\Templates\BlockGrid;
 use App\Fields\Templates\SplitContent;
 use App\Fields\Templates\ContentBlockTemplate;
+use App\Fields\Templates\RelatedContent;
 
 class LayoutBuilder {
 
@@ -23,8 +24,8 @@ class LayoutBuilder {
         $layoutBuilder
         
 			->addFlexibleContent('templates', [
-				'label'			=> 'Layout Builder',
-				'button_label'	=> 'Add Template',
+				'label'						=> 'Layout Builder',
+				'button_label'				=> 'Add Template',
 				'acfe_flexible_advanced' 	=> 1,
 				'acfe_flexible_add_actions' => ['copy'],
 				'acfe_flexible_async' 		=> ['layout'],
@@ -38,6 +39,8 @@ class LayoutBuilder {
                 ->addLayout(CallToAction::getFields())
 
 				->addLayout(ContentBlockTemplate::getFields())
+
+				->addLayout(RelatedContent::getFields())
                 
 			->setLocation('post_type', '==', 'page')
 				->or('post_type', '==', 'post')

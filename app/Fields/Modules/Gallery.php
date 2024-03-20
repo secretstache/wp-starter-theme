@@ -14,9 +14,6 @@ class Gallery {
 
 		/**
          * [Module] - Gallery
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $galleryModule = new FieldsBuilder('gallery', [
             'title'	=>	'Gallery'

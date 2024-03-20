@@ -16,9 +16,6 @@ class BlockGrid {
 
         /**
          * [Template] - Block Grid
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $blockGridTemplate = new FieldsBuilder('block-grid', [
             'label'	=> 'Block Grid'
@@ -39,11 +36,11 @@ class BlockGrid {
                 ])
 
                     ->addImage('icon', [
-                        'label'	=> 'Icon'
+                        'label'	    => 'Icon'
                     ])
 
                     ->addText('title', [
-                        'label'	=> 'Title'
+                        'label'	    => 'Title'
                     ])
 
                     ->addWysiwyg('editor', [
@@ -52,7 +49,20 @@ class BlockGrid {
                         'media_upload' => '0', // 0, 1
                     ])
 
-                    ->addFields(Button::getFields( $is_conditional = true ))
+                    ->addTrueFalse('include_button', [
+                        'label'         => false,
+                        'message'       => 'Include Button',
+                        'default_value' => 0,
+                    ])
+
+                    ->addGroup('button', [
+                        'label'        => 'Button',
+                    ])
+                        ->conditional('include_button', '==', 1)
+                    
+                        ->addFields(Button::getFields())
+
+                    ->endGroup()
 
                 ->endRepeater()
 

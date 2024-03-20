@@ -16,9 +16,6 @@ class CallToAction {
 
 		/**
          * [Template] - Call to Action
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $callToActionTemplate = new FieldsBuilder('call-to-action', [
             'title'	=> 'Call to Action'

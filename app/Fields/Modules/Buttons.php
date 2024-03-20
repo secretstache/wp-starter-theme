@@ -17,9 +17,6 @@ class Buttons
 
         /**
          * [Module] - Button
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $buttonModule = new FieldsBuilder('button', [
             'title'    => 'Button(s)'

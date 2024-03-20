@@ -20,9 +20,6 @@ class Modules {
 
 		/**
          * [List] - Modules
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $modulesList = new FieldsBuilder('modules_list');
 

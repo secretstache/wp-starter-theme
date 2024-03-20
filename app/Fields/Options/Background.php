@@ -11,10 +11,6 @@ class Background {
 
 		/**
          * [Option] - Background Options
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Extract each background option into their own reusable block
-         * @todo Link to Team Snippet Code
          */
         $backgroundOptions = new FieldsBuilder('background_options');
 

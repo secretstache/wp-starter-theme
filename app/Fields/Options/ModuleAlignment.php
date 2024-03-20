@@ -10,9 +10,6 @@ class ModuleAlignment {
 
 		/**
          * [Option] - Module Alignment
-         * @author Rich Staats <rich@secretstache.com>
-         * @since 3.0.0
-         * @todo Link to Team Snippet Code
          */
         $moduleAlignmentOptions = new FieldsBuilder('default_module_alignment');
         
