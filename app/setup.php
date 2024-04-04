@@ -23,6 +23,7 @@ add_action('wp_enqueue_scripts', function () {
  * @return void
  */
 add_action('admin_enqueue_scripts', function () {
+    wp_dequeue_script('columns_width');
     bundle('admin')->enqueue();
 }, 100);
 
