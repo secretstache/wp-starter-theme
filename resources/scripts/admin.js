@@ -1,11 +1,45 @@
-(function ($) {
-	$(document).ready(function ($) {
-		let acf = window.acf;
+document.addEventListener('DOMContentLoaded', function () {
+	let acf = window.acf;
 
-		if (typeof acf == 'undefined') {
-			return;
-		}
+	if (typeof acf == 'undefined') {
+		return;
+	}
 
+	// template spacing
+	acf.addAction('ready_field/name=background_color', function (field) {
+		toggleSectionPaddings(field.$el[0]);
+	});
+
+	acf.addAction('new_field/name=background_color', function (field) {
+		toggleSectionPaddings(field.$el[0]);
+	});
+
+	const PADDINGS_FIELDS_SELECTOR = '.acf-field[data-name="option_top_padding"] [type="range"], .acf-field[data-name="option_top_padding"] [type="number"], .acf-field[data-name="option_bottom_padding"] [type="range"], .acf-field[data-name="option_bottom_padding"] [type="number"]';
+	const FIELDS_CLASS = '.acf-fields';
+
+	function toggleSectionPaddings(bg_field) {
+		const inputs = bg_field.querySelectorAll('input[type="radio"]');
+
+		inputs.forEach(function (input) {
+			input.addEventListener('change', function () {
+				let color = this.value;
+				const paddingsFields = bg_field.closest(FIELDS_CLASS).querySelectorAll(PADDINGS_FIELDS_SELECTOR);
+
+				if (color === 'white') {
+					paddingsFields.forEach(function (field) {
+						field.value = 0;
+					});
+				} else {
+					paddingsFields.forEach(function (field) {
+						field.value = 2;
+					});
+				}
+			});
+		});
+	}
+
+	// columns mobile order
+	(function ($) {
 		acf.add_action('append_field/type=flexible_content', function ($el) {
 			changeOptions($el, 'append');
 		});
@@ -181,5 +215,5 @@
 		function getColumnRowsCount() {
 			return $('div[data-name="columns"]').slice(1).length;
 		}
-	});
-})(window.jQuery);
+	})(window.jQuery);
+});

@@ -41,7 +41,7 @@ class TemplateSpacing
 
             ->addField('option_top_padding', 'range', [
                 'label'         => 'Top Padding',
-                'default_value' => 2,
+                'default_value' => 0,
                 'min'           => 0,
                 'max'           => 3,
                 'step'          => 1,
@@ -52,7 +52,7 @@ class TemplateSpacing
 
             ->addField('option_bottom_padding', 'range', [
                 'label'         => 'Bottom Padding',
-                'default_value' => 2,
+                'default_value' => 0,
                 'min'           => 0,
                 'max'           => 3,
                 'step'          => 1,
