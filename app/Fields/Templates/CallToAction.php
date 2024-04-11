@@ -27,7 +27,7 @@ class CallToAction
             ->addTab('Content')
 
                 ->addText('headline', [
-                    'label'     => 'Headline',
+                    'label'         => 'Headline',
                 ])
 
                 ->addTextarea('desc', [
@@ -42,7 +42,7 @@ class CallToAction
                 ])
 
                 ->addGroup('button', [
-                    'label'        => false,
+                    'label'         => false,
                 ])
                 ->conditional('include_button', '==', 1)
 

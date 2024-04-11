@@ -24,7 +24,7 @@ class Team {
 			])
 
             ->addText('team_job_title', [
-				'label'     => 'Job Title',
+				'label'     	=> 'Job Title',
 			])
 
 			->setLocation('post_type', '==', 'ssm_team');

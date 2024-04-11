@@ -24,7 +24,7 @@ class ImageLink {
                 'label'			=> 'Source',
                 'layout'		=> 'horizontal',
                 'wrapper'		=> [
-                    'width'		=> '50'
+                    'width'		=> 50
                 ],
                 'choices'       => [
                     'internal'  => 'Internal Page',

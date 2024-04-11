@@ -53,14 +53,14 @@ class BrandSettings {
 				'return_format'		=> 'array',
 				'placeholder'		=> '{placeholder}',
 				'wrapper'			=> [
-					'width'			=> '50'
+					'width'			=> 50
 				]
 			])
 
 			->addEmail('primary_email_address', [
 				'label' 	=> 'Primary Email Address',
 				'wrapper'	=> [
-					'width'	=> '50'
+					'width'	=> 50
 				]
 			])
 			

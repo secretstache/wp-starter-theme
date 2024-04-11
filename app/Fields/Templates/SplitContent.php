@@ -50,11 +50,11 @@ class SplitContent {
                         ->conditional('media_type', '==', 'image')
 
                     ->addOembed('oembed', [
-                        'label' 	=> false,
+                        'label' 	    => false,
                     ])
                         ->conditional('media_type', '==', 'video')
                     
-                    ->addFields(Modules::getFields( $media_modules = false ))
+                    ->addFields(Modules::getFields('split-content'))
                     
                 ->endRepeater()
 

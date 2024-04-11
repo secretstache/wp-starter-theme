@@ -49,8 +49,8 @@ class RelatedContent
                 ->conditional('query', '!=', 'curated')
 
                 ->addField('posts_message', 'message', [
-                    'label'     => false,
-                    'message'   => '<b>No other input is required. The list of most recent published posts will be displayed here.</b>',
+                    'label'         => false,
+                    'message'       => '<b>No other input is required. The list of most recent published posts will be displayed here.</b>',
                 ])
                 ->conditional('query', '==', 'latest')
 
