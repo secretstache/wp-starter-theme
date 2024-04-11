@@ -36,11 +36,13 @@ class LayoutBuilder {
                 
                 ->addLayout(SplitContent::getFields())
 
+                ->addLayout(BlockGrid::getFields())
+
                 ->addLayout(CallToAction::getFields())
 
-				->addLayout(ContentBlockTemplate::getFields())
-
 				->addLayout(RelatedContent::getFields())
+				
+				->addLayout(ContentBlockTemplate::getFields())
                 
 			->setLocation('post_type', '==', 'page')
 				->or('post_type', '==', 'post')

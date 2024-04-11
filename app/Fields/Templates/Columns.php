@@ -42,7 +42,7 @@ class Columns
                         'placement'	=>	'left'
                     ])
 
-                        ->addFields(Modules::getFields())
+                        ->addFields(Modules::getFields('free-form'))
 
                     ->addTab('Options')
 

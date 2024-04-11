@@ -3,7 +3,6 @@
 namespace App\Fields\Modules;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
-use App\Fields\Components\Table as TableComponent;
 use App\Fields\Options\Admin;
 use App\Fields\Options\HtmlAttributes;
 use App\Fields\Options\ModuleMargins;
@@ -23,7 +22,9 @@ class Table {
 
             ->addTab('Content')
 
-                ->addFields(TableComponent::getFields())
+                ->addField('table', 'table', [
+                    'label'     => false
+                ])
 
             ->addTab('Options')
 

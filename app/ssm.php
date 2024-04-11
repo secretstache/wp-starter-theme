@@ -176,7 +176,7 @@ function flexible_content_label($title, $field, $layout, $i)
         $label = stripslashes($admin_label) . " - " . $label;
     }
 
-    if (get_sub_field("option_status") == false) {
+    if ($layout['name'] != 'module-template' && get_sub_field("option_status") == false) {
         $label = "<span class=\"template-inactive\">Inactive</span> - " . $label;
     }
 

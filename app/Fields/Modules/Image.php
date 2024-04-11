@@ -3,7 +3,6 @@
 namespace App\Fields\Modules;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
-use App\Fields\Components\Image as ImageComponent;
 use App\Fields\Options\Admin;
 use App\Fields\Options\ImageLink;
 use App\Fields\Options\HtmlAttributes;
@@ -24,7 +23,10 @@ class Image {
 
             ->addTab('Content')
 
-                ->addFields(ImageComponent::getFields())
+                ->addImage('image', [
+                    'label'        => 'Upload Image',
+                    'preview_size' => 'large',
+                ])
 
             ->addTab('Options')
 

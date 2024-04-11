@@ -3,7 +3,6 @@
 namespace App\Fields\Modules;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
-use App\Fields\Components\TextEditor as TextEditorComponent;
 use App\Fields\Options\Admin;
 use App\Fields\Options\HtmlAttributes;
 use App\Fields\Options\ModuleAlignment;
@@ -24,7 +23,11 @@ class TextEditor {
 
             ->addTab('Content')
 
-                ->addFields(TextEditorComponent::getFields( $type = '', $label = '' ))
+                ->addWysiwyg('text_editor', [
+                    'label'         => false,
+                    'toolbar'       => 'full',
+                    'media_upload'  => 1
+                ])
 
             ->addTab('Options')
 

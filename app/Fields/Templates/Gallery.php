@@ -4,7 +4,6 @@ namespace App\Fields\Templates;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 use App\Fields\Components\TemplateHeader;
-use App\Fields\Components\Gallery as GalleryComponent;
 use App\Fields\Options\Background;
 use App\Fields\Options\HtmlAttributes;
 use App\Fields\Options\Admin;
@@ -26,8 +25,10 @@ class Gallery {
             ->addTab('Content')
 
                 ->addFields(TemplateHeader::getFields())
-                
-                ->addFields(GalleryComponent::getFields())
+
+                ->addGallery('gallery', [
+                    'label'    => false
+                ])
 
             ->addTab('Options')
 

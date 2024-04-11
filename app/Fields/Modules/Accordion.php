@@ -3,7 +3,6 @@
 namespace App\Fields\Modules;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
-use App\Fields\Components\Accordion as AccordionComponent;
 use App\Fields\Options\Admin;
 use App\Fields\Options\HtmlAttributes;
 use App\Fields\Options\ModuleMargins;
@@ -23,7 +22,25 @@ class Accordion {
 
             ->addTab('Content')
 
-                ->addFields(AccordionComponent::getFields())
+                ->addRepeater('items', [
+                    'label'        => false,
+                    'layout'       => 'block',
+                    'min'          => 1,
+                    'collapsed'    => 'title',
+                    'button_label' => 'Add Item',
+                ])
+
+                    ->addText('title', [
+                        'label'         => 'Title',
+                    ])
+
+                    ->addWysiwyg('desc', [
+                        'label'         => 'Description',
+                        'toolbar'       => 'basic',
+                        'media_upload'  => 0
+                    ])
+
+                ->endRepeater()
 
             ->addTab('Options')
 

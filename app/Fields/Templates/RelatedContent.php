@@ -7,16 +7,19 @@ use App\Fields\Components\TemplateHeader;
 use App\Fields\Options\Background;
 use App\Fields\Options\HtmlAttributes;
 use App\Fields\Options\Admin;
+use App\Fields\Options\TemplateSpacing;
 
-class RelatedContent {
+class RelatedContent
+{
 
-	public static function getFields() {
+    public static function getFields()
+    {
 
         /**
          * [Template] - Related Content
          */
         $relatedContentTemplate = new FieldsBuilder('related-content', [
-            'title'	=> 'Related Content'
+            'title'    => 'Related Content'
         ]);
 
         $relatedContentTemplate
@@ -27,12 +30,12 @@ class RelatedContent {
 
                 ->addRadio('query', [
                     'label'         => 'Query',
-                    'layout'	    => 'horizontal',
+                    'layout'        => 'horizontal',
                     'choices'       => [
                         'latest'    => 'Latest',
-                        'curated'   => 'Curated',
-                        'solution'  => 'Solutions',
-                        'type'      => 'Type'
+                        'category'  => 'Latest by Category',
+                        'topic'     => 'Latest by Topic',
+                        'curated'   => 'Curated'
                     ]
                 ])
 
@@ -43,17 +46,17 @@ class RelatedContent {
                     'step'          => 1,
                     'default_value' => 6
                 ])
-                    ->conditional('query', '==', 'latest')
+                ->conditional('query', '!=', 'curated')
 
-                ->addField('resource_feed_message', 'message', [
+                ->addField('posts_message', 'message', [
                     'label'     => false,
-                    'message'   => '<b>No other input is required. The list of most recent published resources will be displayed here.</b>',
+                    'message'   => '<b>No other input is required. The list of most recent published posts will be displayed here.</b>',
                 ])
-                    ->conditional('query', '==', 'latest')
+                ->conditional('query', '==', 'latest')
 
-                ->addTaxonomy('type', [
-                    'label'         => 'Resource Type to show',
-                    'taxonomy'      => 'resource_type',
+                ->addTaxonomy('categories', [
+                    'label'         => 'Categories to show',
+                    'taxonomy'      => 'category',
                     'field_type'    => 'multi_select',
                     'allow_null'    => 0,
                     'add_term'      => 0,
@@ -62,11 +65,11 @@ class RelatedContent {
                     'return_format' => 'object',
                     'multiple'      => 1
                 ])
-                    ->conditional('query', '==', 'type')
+                ->conditional('query', '==', 'category')
 
-                ->addTaxonomy('resource_solution', [
-                    'label'         => 'Resource Solutions to show',
-                    'taxonomy'      => 'resource_solutions',
+                ->addTaxonomy('topics', [
+                    'label'         => 'Topics to show',
+                    'taxonomy'      => 'ssm_resource_topic',
                     'field_type'    => 'multi_select',
                     'allow_null'    => 0,
                     'add_term'      => 0,
@@ -75,9 +78,9 @@ class RelatedContent {
                     'return_format' => 'object',
                     'multiple'      => 1
                 ])
-                    ->conditional('query', '==', 'solution')
+                ->conditional('query', '==', 'topic')
 
-                ->addRelationship('posts_to_show', [
+                ->addRelationship('posts', [
                     'label'          => 'Posts to show',
                     'post_type'      => ['post'],
                     'filters'        => ['search'],
@@ -85,11 +88,13 @@ class RelatedContent {
                     'acfe_add_post'  => 1,
                     'acfe_edit_post' => 1,
                 ])
-                    ->conditional('query', '==', 'curated')
+                ->conditional('query', '==', 'curated')
 
             ->addTab('Options')
 
                 ->addFields(Background::getFields())
+
+                ->addFields(TemplateSpacing::getFields())
 
                 ->addFields(HtmlAttributes::getFields())
 
@@ -98,7 +103,5 @@ class RelatedContent {
                 ->addFields(Admin::getFields());
 
         return $relatedContentTemplate;
-
-	}
-
+    }
 }

@@ -24,7 +24,13 @@ class Shared {
 
 			->addTab('Content')
 
-				->addFields(Header::getFields())
+				->addText('headline', [
+					'label'     => 'Headline',
+				])
+
+				->addText('subheadline', [
+					'label'     => 'Subheadline',
+				])
 
 			->addTab('Options')
 

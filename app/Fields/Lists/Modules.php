@@ -14,53 +14,25 @@ use App\Fields\Modules\Accordion;
 use App\Fields\Modules\Html;
 use App\Fields\Modules\ModuleTemplate;
 
-class Modules {
+class Modules
+{
 
-	public static function getFields( $media_modules = true ) {
+    public static function getFields($format = 'free-form')
+    {
 
-		/**
+        /**
          * [List] - Modules
          */
         $modulesList = new FieldsBuilder('modules_list');
 
-        if ( $media_modules ) {
-
-            $modulesList
-
-                ->addFlexibleContent('modules', [
-                    'acfe_flexible_advanced' 	=> 1,
-                    'acfe_flexible_add_actions' => ['copy'],
-                    'acfe_flexible_async' 		=> ['layout'],
-                ])
-
-                    ->addLayout(Header::getFields())
-
-                    ->addLayout(TextEditor::getFields())
-
-                    ->addLayout(Buttons::getFields())
-
-                    ->addLayout(Image::getFields())
-
-                    ->addLayout(Video::getFields())
-
-                    ->addLayout(Form::getFields())
-
-                    ->addLayout(Accordion::getFields())
-
-                    ->addLayout(Html::getFields())
-
-                    ->addLayout(ModuleTemplate::getFields())
-
-                ->endFlexibleContent();
-
-        } else {
+        if ($format == 'free-form') {
 
             $modulesList
 
             ->addFlexibleContent('modules', [
-                'acfe_flexible_advanced' 	=> 1,
-				'acfe_flexible_add_actions' => ['copy'],
-				'acfe_flexible_async' 		=> ['layout'],
+                'acfe_flexible_advanced'    => 1,
+                'acfe_flexible_add_actions' => ['copy'],
+                'acfe_flexible_async'       => ['layout'],
             ])
 
                 ->addLayout(Header::getFields())
@@ -68,6 +40,12 @@ class Modules {
                 ->addLayout(TextEditor::getFields())
 
                 ->addLayout(Buttons::getFields())
+
+                ->addLayout(Image::getFields())
+
+                ->addLayout(Video::getFields())
+
+                ->addLayout(Gallery::getFields())
 
                 ->addLayout(Form::getFields())
 
@@ -79,10 +57,31 @@ class Modules {
 
             ->endFlexibleContent();
 
+        } elseif ($format == 'split-content') {
+
+            $modulesList
+
+            ->addFlexibleContent('modules', [
+                'acfe_flexible_advanced'    => 1,
+                'acfe_flexible_add_actions' => ['copy'],
+                'acfe_flexible_async'       => ['layout'],
+            ])
+
+                ->addLayout(Header::getFields())
+
+                ->addLayout(TextEditor::getFields())
+
+                ->addLayout(Buttons::getFields())
+
+                ->addLayout(Form::getFields())
+
+                ->addLayout(HTML::getFields())
+
+                ->addLayout(ModuleTemplate::getFields())
+
+            ->endFlexibleContent();
         }
 
-		return $modulesList;
-
-	}
-
+        return $modulesList;
+    }
 }
