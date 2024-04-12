@@ -1,54 +1,46 @@
-<p align="center">
-  <a href="https://roots.io/sage/">
-    <img alt="Sage" src="https://cdn.roots.io/app/uploads/logo-sage.svg" height="100">
-  </a>
-</p>
+# THEME_NAME
 
-<p align="center">
-  <a href="https://packagist.org/packages/roots/sage">
-    <img alt="Packagist Installs" src="https://img.shields.io/packagist/dt/roots/sage?label=projects%20created&colorB=2b3072&colorA=525ddc&style=flat-square">
-  </a>
+**THEME_NAME** is a custom theme created for COMPANY_NAME built on top of [Sage](https://roots.io/sage/). It contains both *functional* and *presentable* layers, *implements* custom admin and public experience, *builds* assets and views, *uses* [Blade templating engine](https://laravel.com/docs/5.7/blade) to render front-end and *provides* an ability to do more.
 
-  <a href="https://github.com/roots/sage/actions/workflows/main.yml">
-    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/roots/sage/main.yml?branch=main&logo=github&label=CI&style=flat-square">
-  </a>
+## Main Concepts
 
-  <a href="https://twitter.com/rootswp">
-    <img alt="Follow Roots" src="https://img.shields.io/badge/follow%20@rootswp-1da1f2?logo=twitter&logoColor=ffffff&message=&style=flat-square">
-  </a>
-</p>
+- Built on top of [Sage](https://roots.io/sage/)
+- Uses [SSM Core](https://github.com/secretstache/ssm-core) package
+- Contains both *functional* and *presentable* layers of the project
+- Gets ACF fields data from **View Composers** and controllers and uses it to render frontend UI
+- Uses [Blade templating engine](https://laravel.com/docs/5.7/blade) to render views
+- Uses [Composer](https://getcomposer.org/) to manage dependencies
+- Uses [Yarn](https://yarnpkg.com/en/) to compile assets, optimize images, concatenation / minification
+- Uses [SASS](https://sass-lang.com/) as CSS-preprocessor
 
-<p align="center">Advanced WordPress starter theme with Tailwind CSS and Laravel Blade</p>
+## Installation
 
-<p align="center">
-  <a href="https://roots.io/sage/">Website</a> &nbsp;&nbsp; <a href="https://roots.io/sage/docs/installation/">Documentation</a> &nbsp;&nbsp; <a href="https://github.com/roots/sage/releases">Releases</a> &nbsp;&nbsp; <a href="https://discourse.roots.io/">Community</a>
-</p>
+1. **Clone** the repository to */wp-content/themes/*
+- git clone REPOSITORY_URL
+2. **cd** to theme’s folder
+3. **Run** *composer update && composer install - ignore warnings*
+4. **Run** *yarn install*
+6. **Run** *yarn build*
+7. **Activate** the theme
+8. **Install** required plugins
 
-## Sponsors
 
-Sage is an open source project and completely free to use. If you've benefited from our projects and would like to support our future endeavors, please consider [sponsoring Roots](https://github.com/sponsors/roots).
+## Folders Walkthrough
 
-<div align="center">
-<a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="120" height="90"></a> <a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" width="120" height="90"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" width="120" height="90"></a> <a href="https://worksitesafety.ca/careers/"><img src="https://cdn.roots.io/app/uploads/worksite-safety.svg" alt="Worksite Safety" width="120" height="90"></a> <a href="https://www.copiadigital.com/"><img src="https://cdn.roots.io/app/uploads/copia-digital.svg" alt="Copia Digital" width="120" height="90"></a> <a href="https://www.freave.com/"><img src="https://cdn.roots.io/app/uploads/freave.svg" alt="Freave" width="120" height="90"></a> <a href="https://40q.agency/"><img src="https://cdn.roots.io/app/uploads/40q.svg" alt="40Q" width="120" height="90"></a>
-</div>
+**app/**
 
-## Overview
+- responsible for the basic theme setup
 
-Sage is a WordPress starter theme with block editor support.
+	`Examples:` *setup.php, filters.php*
 
-- Harness the power of [Laravel](https://laravel.com) and its available packages thanks to [Acorn](https://github.com/roots/acorn)
-- Clean, efficient theme templating utilizing [Laravel Blade](https://laravel.com/docs/master/blade)
-- Modern frontend development workflow powered by [Bud](https://bud.js.org/)
-- Out of the box support for [Tailwind CSS](https://tailwindcss.com/)
+**config/**
 
-## Getting Started
+- responsible for the theme configuration
 
-See the [Sage installation documentation](https://roots.io/sage/docs/installation/).
+	`Examples:` *app.php, view.php*
 
-## Stay Connected
+**resources/**
 
-- Join us on Discord by [sponsoring us on GitHub](https://github.com/sponsors/roots)
-- Participate on [Roots Discourse](https://discourse.roots.io/)
-- Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-- Read the [Roots Blog](https://roots.io/blog/)
-- Subscribe to the [Roots Newsletter](https://roots.io/newsletter/)
+- contains assets and presentable UI elements
+
+	`Examples:` *templates/, modules/, assets/*
