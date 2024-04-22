@@ -18,6 +18,17 @@ export default async (app) => {
     .entry('admin', ['@scripts/admin', '@styles/admin'])
     .assets(['images']);
 
+  app.splitChunks({
+    cacheGroups: {
+      commons: {
+      test: /[\\/]node_modules[\\/]|src[\\/]assets[\\/]scripts[\\/]libs/,
+      name: 'vendor',
+      enforce: true,
+      chunks: 'all',
+      },
+    },
+  });
+
   /**
    * Set public path
    *
