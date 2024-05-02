@@ -17,7 +17,7 @@
     "static-start": "yarn --cwd ./static start",
     "static-copy": "run-p static-copy:*",
     "static-copy:styles": "ncp ./static/src/assets/styles ./resources/styles",
-    "static-copy:scripts": "ncp ./static/src/assets/scripts ./resources/scripts/client",
+    "static-copy:scripts": "ncp ./static/src/assets/scripts ./resources/scripts",
     "static-copy:fonts": "ncp ./static/src/assets/fonts ./resources/fonts",
     "static-copy:video": "ncp ./static/src/assets/video ./resources/video",
     "static-copy:images": "ncp ./static/src/assets/images ./resources/images",
