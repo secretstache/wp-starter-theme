@@ -57,6 +57,12 @@ add_action( 'init', function() {
             "parent_slug" => "options-general.php",
         ]);
 
+        acf_add_options_sub_page([
+            "page_title"  => "Utility Classes",
+            "menu_title"  => "Utility Classes",
+            "parent_slug" => "ssm"
+        ]);
+
     }
     
 });
@@ -182,6 +188,32 @@ function flexible_content_label($title, $field, $layout, $i)
 
     return $label;
 };
+
+add_filter('admin_body_class', function ($classes) {
+
+    if (!empty(get_current_screen()->base) && str_contains(get_current_screen()->base, 'acf-options-utility-classes')) {
+
+        global $current_user;
+
+        $devteam = get_field('development_team', 'options');
+
+        if (!$devteam || (is_array($devteam) && !in_array($current_user->ID, array_column($devteam, 'ID')))) {
+            $classes .= ' utility-page-no-access';
+        }
+    }
+
+    return $classes;
+}, 999);
+
+add_action('acf/render_field/name=utility_classes_list_message', function ($field) {
+
+    if (($utility_classes = get_field('utility_classes', 'options')) && !empty($utility_classes)) {
+
+        foreach ($utility_classes as $class) {
+            echo '<div><b>' . $class['name'] . '</b>' . $class['description'] . '</div>';
+        }
+    }
+}, 999);
 
 /**
  * Register Objects

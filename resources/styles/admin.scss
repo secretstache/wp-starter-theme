@@ -33,3 +33,10 @@ div[data-name="modules"] .acf-actions a[data-name="add-layout"] {
 [data-name="one_column_layout"] [data-name="width"] .acf-range-wrap input[type="range"] {
     width: 85%;
 }
+
+[class*="acf-options-utility-classes"].utility-page-no-access {
+    .postbox#submitdiv,
+    .postbox#acf-group_utility_classes_admin {
+        display: none !important;
+    }
+}
