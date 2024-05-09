@@ -22,7 +22,7 @@
 
 					<nav class="site-header__navigation show-for-large">
 
-						@php wp_nav_menu( $builder->getMenuArgs('primary_navigation') ); @endphp
+						@include( 'partials.navigation', ['menu_items' => $navigation['primary'] ] )
 							
 					</nav>
 					

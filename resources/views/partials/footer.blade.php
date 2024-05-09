@@ -72,7 +72,7 @@
 
 					<nav class="site-footer__terms__navigation">
 
-						@php wp_nav_menu( $builder->getMenuArgs('legal_navigation') ); @endphp
+						@include( 'partials.navigation', ['menu_items' => $navigation['primary'] ] )
 								
 					</nav>
 

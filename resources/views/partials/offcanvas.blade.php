@@ -10,7 +10,7 @@
 
                 <nav class="offcanvas__navigation">
 
-                    @php wp_nav_menu( $builder->getMenuArgs('offcanvas') ); @endphp
+                    @include( 'partials.navigation', ['menu_items' => $navigation['primary'] ] )
 
                 </nav>
 

@@ -53,7 +53,8 @@
     "johnbillion/extended-cpts": "^4.3",
     "stoutlogic/acf-builder": "^1.9",
     "ssm/required-plugins": "dev-master",
-    "soberwp/bundle": "^1.0"
+    "soberwp/bundle": "^1.0",
+    "log1x/navi": "*"
   },
   "require-dev": {
     "laravel/pint": "^1.13"

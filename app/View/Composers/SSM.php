@@ -3,7 +3,7 @@
 namespace App\View\Composers;
 
 use Roots\Acorn\View\Composer;
-use App\Includes\Walker;
+use \Log1x\Navi\Navi;
 use Roots\Acorn\View\Composers\Concerns\AcfFields;
 
 class SSM extends Composer
@@ -28,7 +28,10 @@ class SSM extends Composer
     {
 
         return [
-            'builder' => $this->getBuilder(),
+            'builder'       => $this->getBuilder(),
+            'navigation'    => [
+                'primary'   => Navi::make()->build('primary_navigation')->toArray(),
+            ],
             'logo_assets'           => [
                 'brand_logo'        => get_field('brand_logo', 'options'),
                 'favicon'           => get_field('favicon', 'options')
@@ -49,40 +52,6 @@ class SSM extends Composer
             ],
             'is_landing_page'       => is_page_template('template-landing-page.blade.php')
         ];
-
-    }
-
-    public static function getMenuArgs($context, $menu_id = null)
-    {
-
-        $response = [
-            "container"      => FALSE,
-            "walker"         => new Walker()
-        ];
-
-        if ( $context == 'offcanvas' ) {
-
-            $response['theme_location'] = 'primary_navigation';
-            $response['items_wrap'] = '<ul class="menu menu--vertical">%3$s</ul>';
-            
-        } elseif ( $context == 'primary_navigation' ) {
-
-            $response['theme_location'] = 'primary_navigation';
-            $response['items_wrap'] = '<ul class="menu is-dropdown">%3$s</ul>';
-
-        } elseif ( $context == 'legal_navigation' ) {
-
-            $response['theme_location'] = 'legal_navigation';
-            $response['items_wrap'] = '<ul>%3$s</ul>';
-
-        } elseif ( $menu_id ) {
-
-            $response['menu'] = $menu_id;
-            $response['items_wrap'] = '<ul>%3$s</ul>';
-
-        }
-
-        return $response;
 
     }
 

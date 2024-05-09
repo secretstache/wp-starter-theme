@@ -40,6 +40,11 @@ add_action('after_setup_theme', function () {
     add_theme_support('ssm-public-setup');
 
     /**
+     * Enable features from the Soil plugin if activated.
+     */
+    add_theme_support('soil-clean-up');
+
+    /**
      * Disable full-site editing support.
      *
      * @link https://wptavern.com/gutenberg-10-5-embeds-pdfs-adds-verse-block-color-options-and-introduces-new-patterns
