@@ -53,7 +53,7 @@ class RelatedContent extends Templates
         }
 
         $relatedContentData = [
-            'id'            => self::getCustomID($template),
+            'id'            => self::getCustomID($template['option_html_id']),
             'classes'       => self::getCustomClasses('', $template),
             'posts'         => $posts ?? []
         ];
