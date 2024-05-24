@@ -34,7 +34,7 @@ export default async (app) => {
    *
    * @see {@link https://bud.js.org/reference/bud.setPublicPath}
    */
-  app.setPublicPath('/wp-content/themes/sage2024/public/');
+  app.setPublicPath('/wp-content/themes/THEME_PUBLIC_PATH_NAME/public/');
 
   /**
    * Development server settings

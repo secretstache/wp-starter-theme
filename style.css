@@ -1,13 +1,13 @@
 /*
-Theme Name:         Wordpress Starter Theme
-Theme URI:          https://www.secretstache.com
-Description:        Custom WordPress Theme for Wordpress Starter Theme.
+Theme Name:         COMPANY_NAME
+Theme URI:          COMPANY_URL
+Description:        Custom WordPress Theme for COMPANY_NAME
 Version:            1.0
-Author:             SecretStache
-Author URI:         https://www.secretstache.com
-Text Domain:        wst
+Author:             AGENCY_NAME
+Author URI:         AGENCY_URL
+Text Domain:        TEXT_DOMAIN
 License:            MIT License
 License URI:        https://opensource.org/licenses/MIT
-Requires PHP:       7.2.5
-Requires at least:  5.4
+Requires PHP:       8.1
+Requires at least:  5.9
 */
