@@ -4,6 +4,7 @@ namespace App\View\Composers\Switches;
 
 use App\View\Composers\SSM;
 use App\View\Composers\Templates\Columns;
+use App\View\Composers\Templates\RelatedContent;
 
 class Templates extends SSM
 {
@@ -47,6 +48,10 @@ class Templates extends SSM
 
                 case ('columns'):
                     $templateData = Columns::getTemplateData($template);
+                    break;
+
+                case ('related-content'):
+                    $templateData = RelatedContent::getTemplateData($template);
                     break;
             }
         }

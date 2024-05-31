@@ -166,4 +166,30 @@ class SSM extends Composer
 
     }
 
+    public static function getPosts($post_type, $posts_number = 6, $tax_terms = [], $extra_args = [])
+    {
+        $args = [
+            'post_type'         => $post_type,
+            'posts_per_page'    => $posts_number,
+            'status'            => 'publish',
+            'fields'            => 'ids'
+        ];
+
+        if (!empty($tax_terms)) {
+            $term = $tax_terms[0];
+
+            $args['tax_query'] = [[
+                'taxonomy'      => $term->taxonomy,
+                'field'         => 'slug',
+                'terms'         => array_column($tax_terms, 'slug'),
+            ]];
+        }
+
+        if (!empty($extra_args)) {
+            $args = wp_parse_args($extra_args, $args);
+        }
+
+        return get_posts($args) ?: [];
+    }
+
 }

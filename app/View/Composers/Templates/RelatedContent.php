@@ -8,48 +8,23 @@ class RelatedContent extends Templates
 {
     public static function getTemplateData($template)
     {
-
         $relatedContentData = [];
-
-        $args = [
-            'post_type'         => 'post',
-            'posts_per_page'    => $template['posts_number'] ?: 6,
-            'status'            => 'publish',
-            'fields'            => 'ids'
-        ];
 
         if ($template['query'] == 'latest') {
 
-            $posts = get_posts($args);
-
+            $posts = self::getPosts('post', $template['posts_number']);
+            
         } elseif ($template['query'] == 'category' && $template['categories']) {
 
-            $args['tax_query'] = [
-                [
-                    'taxonomy'      => 'category',
-                    'field'         => 'slug',
-                    'terms'         => array_column($template['categories'], 'slug'),
-                ]
-            ];
-
-            $posts = get_posts($args);
+            $posts = self::getPosts('post', $template['posts_number'], $template['categories']);
 
         } elseif ($template['query'] == 'topic' && $template['topics']) {
 
-            $args['tax_query'] = [
-                [
-                    'taxonomy' => 'ssm_resource_topic',
-                    'field'    => 'slug',
-                    'terms'    => array_column($template['topics'], 'slug'),
-                ]
-            ];
+            $posts = self::getPosts('post', $template['posts_number'], $template['topics']);
 
-            $posts = get_posts($args);
-
-        } elseif ($template['query'] == 'curated' && $template['posts']) {
+        } elseif ($template['query'] == 'curated') {
 
             $posts = $template['posts'];
-
         }
 
         $relatedContentData = [
