@@ -6,6 +6,9 @@ const isBlocks = process.env.project === 'blocks';
 function buildLoaders() {
     const jsLoader = {
         test: /\.js$/,
+		resolve: {
+			fullySpecified: false,
+		},
         use: {
             loader: 'babel-loader',
             options: {

@@ -47,10 +47,4 @@ export default async (app) => {
     .setUrl('http://localhost:3000')
     .setProxyUrl(process.env.WP_HOME)
     .watch(['resources/views', 'app']);
-
-  app.eslint
-    .extends(['@roots/eslint-config'])
-    .setRules({ 'no-console': 'error' })
-    .setFailOnError(false)
-    .setFailOnWarning(false);
 };

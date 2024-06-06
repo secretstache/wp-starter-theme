@@ -1,5 +1,5 @@
 #dashboard-widgets-wrap .postbox-container .empty-container {
-    display: block !important;
+	display: block !important;
 }
 
 div#setting-error-tgmpa.notice.notice-warning.settings-error.is-dismissible,
@@ -8,35 +8,35 @@ div#setting-error-tgmpa.notice.notice-warning.settings-error.is-dismissible,
 .postbox#tagsdiv-ssm_ds_type,
 .post-type-cb_template .acf-tooltip a[data-layout="content-block-template"],
 .post-type-mb_template .acf-tooltip a[data-layout="module-template"] {
-    display: none;
+	display: none;
 }
 
 .ssm-background-color-img,
 .acfe-image-selector {
-    li {
-        margin-right: 18px !important;
+	li {
+		margin-right: 18px !important;
 
-        .image.png {
-            width: 25px !important;
-            height: 25px !important;
-            border-width: 1.5px !important;
-        }
-    }
+		.image.png {
+			border-width: 1.5px !important;
+			width: 25px !important;
+			height: 25px !important;
+		}
+	}
 }
 
 div[data-name="modules"] .acf-actions a[data-name="add-layout"] {
-    margin-left: 5px;
-    margin-bottom: 8px;
+	margin-bottom: 8px;
+	margin-left: 5px;
 }
 
 [data-name="container_options"] [data-name="width"] .acf-range-wrap input[type="range"],
 [data-name="one_column_layout"] [data-name="width"] .acf-range-wrap input[type="range"] {
-    width: 85%;
+	width: 85%;
 }
 
 [class*="acf-options-utility-classes"].utility-page-no-access {
-    .postbox#submitdiv,
-    .postbox#acf-group_utility_classes_admin {
-        display: none !important;
-    }
+	.postbox#submitdiv,
+	.postbox#acf-group_utility_classes_admin {
+		display: none !important;
+	}
 }

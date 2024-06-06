@@ -8,23 +8,14 @@
         "project": "default"
     },
     "scripts": {
-        "clean": "rimraf dist",
-        "start": "cross-env npm-run-all -l clean -p start:*",
-        "start:webpack": "cross-env project=$npm_package_vars_project mode=development webpack",
-        "start:eleventy": "cross-env prefix= project=$npm_package_vars_project mode=development eleventy --quiet --watch --serve",
-        "build": "cross-env npm-run-all clean build:*",
-        "staging-build": "cross-env npm-run-all clean staging-build:*",
-        "build:webpack": "cross-env mode=production webpack",
-        "build:eleventy": "cross-env prefix=$npm_package_vars_prefix project=$npm_package_vars_project mode=production eleventy --quiet",
-        "staging-build:webpack": "cross-env mode=production webpack",
-        "staging-build:eleventy": "cross-env prefix=/static project=$npm_package_vars_project mode=production eleventy --quiet",
-        "lint": "npm-run-all lint:js:fix lint:scss:fix",
-        "lint:js": "npx eslint src/assets/scripts",
-        "lint:js:fix": "yarn lint:js --fix",
-        "lint:scss": "npx stylelint src/**/*.scss",
-        "lint:scss:fix": "yarn lint:scss --fix",
-        "prettier": "npx prettier src --check",
-        "prettier:fix": "yarn prettier --write"
+		"clean": "rimraf dist",
+		"start": "cross-env npm-run-all -l clean -p start:*",
+		"start:webpack": "cross-env project=$npm_package_vars_project mode=development webpack",
+		"start:eleventy": "cross-env prefix= project=$npm_package_vars_project mode=development eleventy --quiet --watch --serve",
+		"build": "cross-env npm-run-all clean staging-build:*",
+		"staging-build": "cross-env npm-run-all clean staging-build:*",
+		"staging-build:webpack": "cross-env mode=production webpack",
+		"staging-build:eleventy": "cross-env prefix=/static project=$npm_package_vars_project mode=production eleventy --quiet"
     },
     "devDependencies": {
         "@11ty/eleventy": "^2.0.1",
@@ -63,13 +54,6 @@
         "webpack-bundle-analyzer": "^4.10.2",
         "webpack-cli": "^5.1.4",
         "webpackbar": "^6.0.1"
-    },
-    "dependencies": {
-        "@splidejs/splide": "^4.1.4",
-        "@splidejs/splide-extension-auto-scroll": "^0.5.3",
-        "lightgallery": "^2.7.1",
-        "plyr": "^3.7.3",
-        "slim-select": "^2.8.2"
     },
     "resolutions": {
         "string-width": "^4.2.3",

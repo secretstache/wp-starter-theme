@@ -4,8 +4,8 @@ const { buildWebpackConfig } = require('./config/build/buildWebpackConfig');
 const paths = {
     entry: {
         app: [
-            path.resolve(__dirname, 'src', 'assets/scripts/app.js'),
-            path.resolve(__dirname, 'src', 'assets/styles/app.scss'),
+            path.resolve('../resources/scripts/client/app.js'),
+            path.resolve('../resources/styles/app.scss'),
         ],
         'design-system': [
             path.resolve(__dirname, 'src', 'partials/design-system/assets/design-system-scripts.js'),
