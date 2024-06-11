@@ -30,12 +30,8 @@ class ComposerScripts
 
         $io->write('<comment>Setting up your project...</comment>');
 
-        // setup static branch
-        self::installStaticBoilerplate($event);
+        // Project preparation steps 
         self::updatePackagePrefixPath($io, $preevuuPath);
-        self::pushStaticBoilerplate($event);
-
-        // setup master branch
         self::updateReadme($io, $companyName, $repositoryUrl);
         self::updateThemeInfo($io, $companyName, $companyUrl, $agencyName, $agencyUrl, $textDomain);
         self::updateThemePublicPathName($io, $themePublicPathName);
@@ -44,21 +40,6 @@ class ComposerScripts
         self::installPackages($io);
         self::buildAssets($io);
         self::pushMasterBranch($event);
-    }
-
-    public static function installStaticBoilerplate(Event $event)
-    {
-        $io = $event->getIO();
-        $io->write("<comment>Cloning the ssm-static-boilerplate repository...<comment>");
-
-        self::runCommand(['git', 'checkout', '-b', 'static'], $io);
-
-        self::runCommand(['git', 'clone', 'https://github.com/secretstache/ssm-static-boilerplate', 'static'], $io);
-
-        // Remove the .git directory
-        self::runCommand(['rm', '-rf', './static/.git'], $io);
-
-        $io->write("<info>Complete.</info>");
     }
 
     private static function updatePackagePrefixPath(IOInterface $io, string $preevuuPath)
@@ -92,22 +73,6 @@ class ComposerScripts
         } catch (\Exception $e) {
             $io->write('<error>' . $e->getMessage() . '</error>');
         }
-    }
-
-    public static function pushStaticBoilerplate(Event $event)
-    {
-        $io = $event->getIO();
-        $io->write("<comment>Push the static to repository...<comment>");
-
-        self::runCommand(['git', 'add', '.'], $io);
-
-        self::runCommand(['git', 'commit', '-m', 'install SSM Static Boilerplate'], $io);
-
-        self::runCommand(['git', 'push', '-u', 'origin', 'static'], $io);
-
-        self::runCommand(['git', 'checkout', 'master'], $io);
-
-        $io->write("<info>Complete.</info>");
     }
 
     private static function updateReadme(IOInterface $io, string $companyName, string $repositoryUrl)
@@ -219,10 +184,7 @@ class ComposerScripts
     {
         $io->write("<comment>Installing npm dependencies...<comment>");
 
-        self::runCommand([
-            'yarn',
-            'install',
-        ], $io);
+        self::runCommand(['yarn', 'install'], $io);
 
         $io->write("<info>Complete.</info>");
     }
@@ -231,10 +193,7 @@ class ComposerScripts
     {
         $io->write("<comment>Building assets...</comment>");
 
-        self::runCommand([
-            'yarn',
-            'build',
-        ], $io, 360);
+        self::runCommand(['yarn','build'], $io, 360);
 
         $io->write("<info>Complete.</info>");
     }
@@ -255,9 +214,7 @@ class ComposerScripts
         $io->write("<comment>Final stage...<comment>");
 
         self::runCommand(['git', 'add', '.'], $io);
-
         self::runCommand(['git', 'commit', '-m', 'update theme info'], $io);
-
         self::runCommand(['git', 'push', '-u', 'origin', 'master'], $io);
 
         $io->write("<info>Setup Complete.</info>");
