@@ -7,6 +7,8 @@
  * @type {import('@roots/bud').Config}
  */
 export default async (app) => {
+	app.alias('@modules', app.path('node_modules'))
+
   /**
    * Application assets & entrypoints
    *

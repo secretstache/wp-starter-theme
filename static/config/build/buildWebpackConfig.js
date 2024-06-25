@@ -26,6 +26,7 @@ function buildWebpackConfig(options) {
 			alias: {
 				"@images": path.resolve("../resources/images"),
 				"@fonts": path.resolve("../resources/fonts"),
+				"@modules": path.resolve("../node_modules"),
 			}
 		}
     };
