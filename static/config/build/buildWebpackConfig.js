@@ -1,3 +1,5 @@
+const path = require('path');
+
 const { buildPlugins } = require('./buildPlugins');
 const { buildLoaders } = require('./buildLoaders');
 const { buildOptimization } = require('./buildOptimization');
