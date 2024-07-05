@@ -13,7 +13,6 @@
     "build": "bud build --dashboard --no-browserslist-update",
     "static-install": "yarn --cwd ./static install",
     "static-build": "yarn --cwd ./static build",
-    "static-staging-build": "yarn --cwd ./static staging-build",
     "static-start": "yarn --cwd ./static start",
     "lint": "npm-run-all lint:js:fix lint:scss:fix prettier:fix",
     "lint:js": "eslint resources/scripts/client/*.js",
