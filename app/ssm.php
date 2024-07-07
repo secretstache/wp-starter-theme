@@ -7,10 +7,20 @@
 namespace App;
 
 /**
+ * Activate Required Plugins lib
+ */
+add_action('after_setup_theme', function () {
+
+    $requiredPlugins = new \SSM\RequiredPlugins();
+    $requiredPlugins->setup();
+
+});
+
+/**
  * Add Required Plugins
  */
-add_filter( 'sober/bundle/file', function () {
-    return get_template_directory( __FILE__ ) . '/config/json/required-plugins.json';
+add_filter( 'ssm/required_plugins/config_path', function () {
+    return get_template_directory( __FILE__ ) . '/app/Config/required-plugins.php';
 });
 
 /**
@@ -63,9 +73,50 @@ add_action( 'init', function() {
             "parent_slug" => "ssm"
         ]);
 
+        $framework_settings_mode = get_option('framework_settings_mode');
+
+        if( $framework_settings_mode != 'off' ) {
+
+            global $current_user;
+
+            if( ( $team = get_field( 'development_team', 'options' ) ) && !empty( $team ) && in_array( $current_user->ID, array_column( $team, 'ID' ) ) ) {
+
+                acf_add_options_sub_page([
+                    "page_title"  => "Framework Settings",
+                    "menu_title"  => "Framework Settings",
+                    "parent_slug" => "ssm"
+                ]);
+
+            }
+
+        }
+
     }
     
 });
+
+add_filter('acf/update_value', function( $value, $post_id, $field ) {
+
+    $default_values = [
+        'default_plugins' => [
+            'advanced-custom-fields-pro', 
+			'acf-extended-pro',
+			'classic-editor',
+			'customizer-remove-all-parts',
+			'disable-comments',
+			'image-processing-queue',
+			'safe-svg',
+			'roots-soil'
+        ]
+    ];
+
+    if( array_key_exists( $field['name'], $default_values ) ) {
+        $value = array_unique( array_merge( $default_values[$field['name']], (array)$value ) );
+    }
+
+    return $value;
+
+}, 10, 3);
 
 /**
  * Modified Post Excerpt

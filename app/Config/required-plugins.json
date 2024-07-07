@@ -1,5 +1,18 @@
 [
     {
+        "name": "Action Scheduler",
+        "slug": "action-scheduler",
+        "required": false,
+        "force_activation": false
+    },
+    {
+        "name": "Admin Menu Editor Pro",
+        "slug": "admin-menu-editor-pro",
+        "source": "https://www.secretstache.com/required-plugins/admin-menu-editor-pro.zip",
+        "required": false,
+        "force_activation": false
+    },
+    {
         "name": "Advanced Custom Fields PRO",
         "slug": "advanced-custom-fields-pro",
         "source": "https://www.secretstache.com/required-plugins/advanced-custom-fields-pro.zip",
@@ -21,22 +34,14 @@
         "force_activation": false
     },
     {
-        "name": "Admin Menu Editor Pro",
-        "slug": "admin-menu-editor-pro",
-        "source": "https://www.secretstache.com/required-plugins/admin-menu-editor-pro.zip",
-        "required": false,
-        "force_activation": false
-    },
-    {
         "name": "Advanced Custom Fields: Gravityforms Add-on",
         "slug": "acf-gravityforms-add-on",
         "required": false,
         "force_activation": false
     },
     {
-        "name": "Customizer Remove All Parts",
-        "slug": "customizer-remove-all-parts",
-        "source": "https://www.secretstache.com/required-plugins/customizer-remove-all-parts.zip",
+        "name": "Better Search Replace",
+        "slug": "better-search-replace",
         "required": false,
         "force_activation": false
     },
@@ -47,10 +52,24 @@
         "force_activation": true
     },
     {
+        "name": "Customizer Remove All Parts",
+        "slug": "customizer-remove-all-parts",
+        "source": "https://www.secretstache.com/required-plugins/customizer-remove-all-parts.zip",
+        "required": true,
+        "force_activation": true
+    },
+    {
         "name": "Disable Comments",
         "slug": "disable-comments",
         "required": true,
         "force_activation": true
+    },
+    {
+        "name": "FacetWP",
+        "slug": "facetwp",
+        "source": "https://www.secretstache.com/required-plugins/facetwp.zip",
+        "required": false,
+        "force_activation": false
     },
     {
         "name": "Gravity Forms",
@@ -66,15 +85,29 @@
         "force_activation": true
     },
     {
-        "name": "Roots/Soil",
-        "slug": "roots-soil",
-        "source": "https://www.secretstache.com/required-plugins/roots-soil.zip",
-        "required": true,
-        "force_activation": true
+        "name": "Real Media Library",
+        "slug": "real-media-library",
+        "source": "https://www.secretstache.com/required-plugins/real-media-library.zip",
+        "required": false,
+        "force_activation": false
     },
     {
         "name": "Safe SVG",
         "slug": "safe-svg",
+        "required": true,
+        "force_activation": true
+    },
+    {
+        "name": "SearchWP",
+        "slug": "searchwp4",
+        "source": "https://www.secretstache.com/required-plugins/searchwp4.zip",
+        "required": false,
+        "force_activation": false
+    },
+    {
+        "name": "Soil",
+        "slug": "roots-soil",
+        "source": "https://www.secretstache.com/required-plugins/roots-soil.zip",
         "required": true,
         "force_activation": true
     },
@@ -96,18 +129,31 @@
         "required": false,
         "force_activation": false
 	},
-	{
-    	"name": "WP Rocket",
-    	"slug": "wp-rocket",
-    	"source": "https://www.secretstache.com/required-plugins/wp-rocket.zip",
-    	"required": false,
-    	"force_activation": false
-    },
+    {
+        "name": "Rank Math SEO",
+        "slug": "seo-by-rank-math",
+        "required": false,
+        "force_activation": false
+	},
+    {
+        "name": "Rank Math SEO PRO",
+        "slug": "seo-by-rank-math-pro",
+        "source": "https://www.secretstache.com/required-plugins/seo-by-rank-math-pro.zip",
+        "required": false,
+        "force_activation": false
+	},
     {
         "name": "WP Migrate DB Pro",
         "slug": "wp-migrate-db-pro",
         "source": "https://www.secretstache.com/required-plugins/wp-migrate-db-pro.zip",
         "required": false,
         "force_activation": false
+    },
+    {
+    	"name": "WP Rocket",
+    	"slug": "wp-rocket",
+    	"source": "https://www.secretstache.com/required-plugins/wp-rocket.zip",
+    	"required": false,
+    	"force_activation": false
     }
 ]

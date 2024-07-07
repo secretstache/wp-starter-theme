@@ -49,12 +49,11 @@
   "require": {
     "php": ">=8.1",
     "roots/acorn": "^3.3",
-    "ssm/core": "dev-master",
     "johnbillion/extended-cpts": "^4.3",
     "stoutlogic/acf-builder": "^1.9",
-    "ssm/required-plugins": "dev-master",
-    "soberwp/bundle": "^1.0",
-    "log1x/navi": "*"
+    "log1x/navi": "*",
+    "ssm/core": "dev-master",
+    "ssm/required-plugins": "dev-master"
   },
   "require-dev": {
     "laravel/pint": "^1.13"
