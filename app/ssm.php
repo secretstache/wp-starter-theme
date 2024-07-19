@@ -111,13 +111,6 @@ add_filter( 'ssm_disable_image_tags', function( $content ) {
 }, 10 );
 
 /**
- * Remove Block Library Styles
- */
-add_action( 'wp_enqueue_scripts', function() {
-    wp_dequeue_style( 'wp-block-library' ); // WordPress core
-}, 100 );
-
-/**
  * Remove unnecessary item from Admin Bar Menu
  */
 add_action( 'admin_bar_menu', function( $wp_admin_bar ) {

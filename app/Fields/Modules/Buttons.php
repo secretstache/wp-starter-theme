@@ -18,7 +18,7 @@ class Buttons
         /**
          * [Module] - Button
          */
-        $buttonModule = new FieldsBuilder('button', [
+        $buttonModule = new FieldsBuilder('buttons', [
             'title'    => 'Button(s)'
         ]);
 

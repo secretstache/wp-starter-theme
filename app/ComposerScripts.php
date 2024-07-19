@@ -193,7 +193,7 @@ class ComposerScripts
     {
         $io->write("<comment>Building assets...</comment>");
 
-        self::runCommand(['yarn','build'], $io, 360);
+        self::runCommand(['yarn', 'build'], $io, 360);
 
         $io->write("<info>Complete.</info>");
     }
