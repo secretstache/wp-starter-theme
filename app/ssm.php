@@ -136,10 +136,6 @@ add_filter( 'wpseo_sitemap_exclude_author', function( $value ) {
     return [];
 });
 
-add_action('wp_dashboard_setup', function() {
-    remove_meta_box('wpseo-wincher-dashboard-overview', 'dashboard', 'normal');
-});
-
 /**
  * Manage Post Columns
  */

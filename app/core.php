@@ -36,6 +36,7 @@ add_action('admin_init', function () {
     remove_meta_box("wpe_dify_news_feed", "dashboard", "normal");
     remove_meta_box("wpseo-dashboard-overview", "dashboard", "normal");
     remove_meta_box("ssm_main_dashboard_widget", "dashboard", "normal");
+    remove_meta_box("wpseo-wincher-dashboard-overview", "dashboard", "normal");
     remove_action("try_gutenberg_panel", "wp_try_gutenberg_panel");
 });
 
@@ -179,5 +180,67 @@ if( class_exists('acf') ) {
             }
         }
     }, 99);
+
+    /**
+     * Load Available Dashboard Widgets into the ACF Field
+     */
+    add_filter('acf/load_field/name=dashboard_widgets_to_remove', function ($field) {
+        $field['choices'] = get_option('all_dashboard_widgets') ?? [];
+        return $field;
+    });
+
+    /**
+     * Setup the Dashboard Widgets
+     */
+    add_action('wp_dashboard_setup', function () {
+        $widgets_to_remove = get_field('dashboard_widgets_to_remove', 'options');
+
+        update_option('all_dashboard_widgets', get_all_dashboard_widgets());
+        remove_dashboard_widgets($widgets_to_remove);
+    }, 999);
+
+    /**
+     * Retrieve All Dashboard Widgets With Their Titles
+     */
+    function get_all_dashboard_widgets()
+    {
+        global $wp_meta_boxes;
+
+        if (!empty($wp_meta_boxes['dashboard'])) {
+            foreach ($wp_meta_boxes['dashboard'] as $context => $priorities) {
+                foreach ($priorities as $priority => $widgets_by_priority) {
+                    foreach ($widgets_by_priority as $widget_id => $widget) {
+                        if (isset($widget['title'])) {
+                            $widgets[$widget_id] = $widget['title'];
+                        }
+                    }
+                }
+            }
+        }
+
+        return $widgets ?? [];
+    }
+
+    /**
+     * Remove Specified Widgets From the Dashboard
+     */
+    function remove_dashboard_widgets($widgets_to_remove)
+    {
+        global $wp_meta_boxes;
+
+        if (empty($widgets_to_remove)) {
+            return;
+        }
+
+        foreach ($widgets_to_remove as $widget_id) {
+            foreach ($wp_meta_boxes['dashboard'] as &$priorities) {
+                foreach ($priorities as $priority => &$widgets) {
+                    if (isset($widgets[$widget_id])) {
+                        unset($widgets[$widget_id]);
+                    }
+                }
+            }
+        }
+    }
 
 }
