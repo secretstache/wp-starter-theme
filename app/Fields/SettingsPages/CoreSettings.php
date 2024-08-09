@@ -85,7 +85,7 @@ class CoreSettings
             ])
 
             ->addSelect('dashboard_widgets_to_remove', [
-                'label'        => 'Dashboard Widgets to Remove',
+                'label'        => 'Dashboard Widgets to remove',
                 'multiple'     => 1,
                 'ui'           => 1,
                 'ajax'         => 0,
