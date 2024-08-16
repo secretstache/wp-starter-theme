@@ -45,6 +45,7 @@ class LayoutBuilder {
 				->addLayout(ContentBlockTemplate::getFields())
                 
 			->setLocation('post_type', '==', 'page')
+				->and('page_template', '!=', 'template-legal-page.blade.php')
 				->or('post_type', '==', 'post')
 				->or('post_type', '==', 'ssm_design_system')
 					->and('page_template', '!=', 'template-design-system-archive-page.blade.php')
