@@ -204,6 +204,20 @@ add_action('acf/render_field/name=utility_classes_list_message', function ($fiel
     }
 }, 999);
 
+add_action('admin_footer', function () {
+    if (class_exists('GFForms')) {
+        $isGravityFormsEditPage = isset($_GET['page']) && 'gf_edit_forms' === $_GET['page'];
+        if (!$isGravityFormsEditPage) {
+            return;
+        }
+        ?>
+            <script type="text/javascript">
+                document.querySelector('select[name="_gform_setting_event"]').setAttribute('id', 'event');
+            </script>
+        <?php
+    }
+}, 100);
+
 /**
  * Register Objects
  */
